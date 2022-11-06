@@ -1,3 +1,7 @@
+-----------------For support, scripts, and more----------------
+---------------  https://discord.gg/htHDtwCxAX  ---------------
+---------------------------------------------------------------
+
 CreateThread(function()
 	while true do
         local ped = PlayerPedId()

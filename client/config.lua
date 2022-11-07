@@ -1,3 +1,6 @@
+-----------------For support, scripts, and more----------------
+---------------  https://discord.gg/htHDtwCxAX  ---------------
+---------------------------------------------------------------
 Config = {
 	FirstPersonOnly = true,
 

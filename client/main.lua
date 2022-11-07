@@ -5,13 +5,15 @@
 CreateThread(function()
 	while true do
         local ped = PlayerPedId()
+        local sleep = 1500
+        if IsPedArmed(ped, 4) then
+            sleep = 0
             if IsPedShooting(ped) and not IsPedDoingDriveby(ped) then
                 local _,wep = GetCurrentPedWeapon(PlayerPedId())
                 if Config.recoils[wep] and Config.recoils[wep] ~= 0 then
                     ShakeGameplayCam('SMALL_EXPLOSION_SHAKE', Config.recoils[wep])
                 end
             end
-
             if Config.FirstPersonOnly then
                 if IsControlPressed(0, 25) then
                     if GetFollowPedCamViewMode() == 4 and not check then
@@ -28,6 +30,7 @@ CreateThread(function()
                     end
                 end
             end
-        Wait(0)
+        end
+        Wait(sleep)
 	end
 end)
